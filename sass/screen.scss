@@ -1,0 +1,86 @@
+@import "compass/reset";
+@import "compass/css3";
+
+@import "helpers/mixins";
+@import "helpers/variables";
+@import "helpers/animations";
+
+@import "ui/fonts";
+@import "ui/navigation";
+
+@import url(http://fonts.googleapis.com/css?family=Merriweather:400,300);
+
+* {
+    @include box-sizing(border-box);
+}
+
+html,
+body {
+    height: 100%;
+    min-height: 100%;
+    background-color: $white;
+    color: $text-alpha;
+    font-family: $merriweather;
+    font-size: 16px;
+    font-weight: 300px;
+    line-height: 1.5;
+}
+
+body {
+    width: 100%;
+    display: table;
+}
+
+.logo {
+    display: block;
+    @include rem("padding-bottom", 16px);
+    clear: both;
+    a {
+        position: relative;
+        margin: 0 auto;
+        @include box-shadow(none);
+        &,
+        span {
+            @include rem("width", 320px);
+            @include rem("height", 135px);
+            display: block;
+        }
+        span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-image: url(/images/matt-burrows-logo.png);
+            background-repeat: no-repeat;
+            text-indent: -999px;
+            overflow: hidden;
+            &.m {
+                background-position: 0 0;
+                -webkit-animation: logo-m 1 1s ease;
+                -moz-animation: logo-m 1 1s ease;
+                -ms-animation: logo-m 1 1s ease;
+                -o-animation: logo-m 1 1s ease;
+                animation: logo-m 1 1s ease;
+            }
+            &.b {
+                background-position: 0 -135px;
+                -webkit-animation: logo-b 1 1s ease;
+                -moz-animation: logo-b 1 1s ease;
+                -ms-animation: logo-b 1 1s ease;
+                -o-animation: logo-b 1 1s ease;
+                animation: logo-b 1 1s ease;
+            }
+        }
+    }
+}
+
+.page-container {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.text-module {
+    @include rem("max-width", 960px);
+    margin: 0 auto;
+    @include rem("padding", 0 40px);
+}

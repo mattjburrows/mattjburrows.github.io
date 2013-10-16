@@ -1,0 +1,58 @@
+#{headings()} {
+	@include rem("margin", 8px 0 16px 0);
+    font-family: $open-sans;
+    font-weight: 300;
+}
+
+h1,
+.h1 {
+	@include rem("font-size", 64px);
+	text-transform: uppercase;
+}
+
+h2,
+.h2 {
+	@include rem("font-size", 48px);	
+}
+
+h3,
+.h3 {
+	@include rem("font-size", 36px);
+}
+
+h4,
+.h4 {
+	@include rem("font-size", 30px);
+	font-weight: 400;
+}
+
+h5,
+.h5 {
+	@include rem("font-size", 24px);
+}
+
+h6,
+.h6 {
+	@include rem("font-size", 18px);
+}
+
+p {
+	@include rem("margin", 0 0 16px 0);
+	@include rem("font-size", 24px);
+}
+
+ul,
+ol {
+	@include rem("margin", 0 0 16px 0);
+	@include rem("font-size", 24px);
+}
+
+a {
+	color: $brand-alpha;
+	text-decoration: none;
+	@include single-transition(color, 0.25s, ease-in, 0s);
+	@include box-shadow(rgba($text-alpha, 0.25) 0 1px 0);
+	&:hover {
+		color: shade($brand-alpha, 25%);
+	}
+}

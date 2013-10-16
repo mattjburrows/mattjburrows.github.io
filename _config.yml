@@ -1,0 +1,3 @@
+name: Matt.J.Burrows
+pygments: true
+exclude: ["config.rb", "Gruntfile.js", "package.json", "node_modules", "sass"]
