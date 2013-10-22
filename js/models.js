@@ -1,10 +1,10 @@
 (function($, App){
 
 	/*
-     * @name Ess.Storage
+     * @name App.Storage
      * Get, Set and Delete LocalStorage API methods.
      */
-  	var Storage = {
+  	var Storage = window.Storage = {
     	/*
      	 * @name _getData
      	 * Run a check to see whether the value is a string.
@@ -14,9 +14,9 @@
       		var value = localStorage[key] || false;
       		if (value) {
         		if (typeof value === 'string') {
-          			return JSON.parse(value);
+                    return value;
         		} else {
-          			return value;
+                    return JSON.parse(value);
         		}
       		}
       		return false;
@@ -42,7 +42,32 @@
     	}
   	};
 
-	App.prototype.Feed = function(obj) {
+    App.prototype.UserModel = function(obj) {
+        var self = this,
+            $userName = $('#user-name'),
+            $userNavigation = $('#user-navigation')
+            model = Backbone.Model.extend({
+                uppdateUserName: function(e) {
+                    var name = this.get('name');
+                    Storage._setData('userName', name);
+                    $userName.html(name);
+                },
+                showUserNavigation: function(e) {
+                    $userNavigation.toggleClass('is-invisible', 'is-visible');
+                },
+                defaults: {
+                    name: 'User'
+                },
+                initialize: function() {
+                    this
+                        .once('change:name', this.showUserNavigation, this)
+                        .on('change:name', this.uppdateUserName, this);
+                }
+            });
+        return new model(obj);
+    }
+
+	App.prototype.FeedModel = function(obj) {
 		var self = this,
 			model = Backbone.Model.extend({
 				defaults: {
@@ -70,13 +95,13 @@
 		for(var i = 0; i < max; i += 1){
 			var tweet = tweets[i];
 			tweet.type = 'twitter';
-			var model = self.Feed(tweet);
+			var model = self.FeedModel(tweet);
 		}
 	};
 
 	App.prototype.fetchRepositories = function() {
         var self = this,
-            uri  = this._config.reposUrl + this._config.perPage;
+            uri  = this.Config.reposUrl + this.Config.perPage;
         $.getJSON(uri, function(results) {
             console.log(results)
         });

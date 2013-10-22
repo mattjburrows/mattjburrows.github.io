@@ -11,18 +11,26 @@
     </head>
     <body>
         
-        <div class="page-container">
+        <div class="faux-table">
 
-            <section class="page-content text-module"></section>
-
-            <footer class="page-footer text-module">
+            <header class="faux-table__cell">
                 <p><span class="h3">Matt.J.Burrows</span><br>Senior Front-end Developer</p>
                 <ul class="h6">
                     <li><a href="http://github.com/mattjburrows/" target="_blank">github.com/mattjburrows</a></li>
                     <li><a href="http://twitter.com/mattjburrows/" target="_blank">twitter.com/mattjburrows</a></li>
                 </ul>
-            </footer>
+            </header>
         
+        </div>
+        
+        <div class="faux-table">
+
+            <section class="faux-table__cell">
+                <p>Hi, I'm Matt. What's your name?</p>
+                <p><input type="text" placeholder="enter name" id="user-name-input" class="user-input"></p>
+                <p id="user-navigation" class="is-invisible">Hi <span id="user-name"></span>, what do you want see? <a href="#github">My repositories</a> or <a href="#twitter">my twitter feed</a>?</p>
+            </section>
+            
         </div>
         
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>

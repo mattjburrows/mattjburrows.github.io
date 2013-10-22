@@ -1,0 +1,19 @@
+input[type=text],
+input[type=password],
+input[type=email],
+textarea {
+    background: transparent;
+    border: 0;
+    line-height: 1.5;
+}
+
+input {
+    &.user-input {
+        @include inline-block;
+        border-bottom: 1px dotted lighten($text-alpha, 0.25);
+        color: $text-alpha;
+        font-family: $merriweather;
+        @include rem("font-size", 24px);
+        text-align: center;
+    }
+}
