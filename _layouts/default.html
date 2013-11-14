@@ -26,19 +26,19 @@
         <div class="faux-table">
 
             <section class="faux-table__cell">
-                <p>Hi, I'm Matt. What's your name?</p>
-                <p><input type="text" placeholder="enter name" id="user-name-input" class="user-input"></p>
-                <p id="user-navigation" class="is-invisible">Hi <span id="user-name"></span>, what do you want see? <a href="#github">My repositories</a> or <a href="#twitter">my twitter feed</a>?</p>
+                <p>Hi <span id="user-name"></span>, I'm Matt. Senior Front-end Developer at <a href="http://www.essencedigital.com" title="Essence Digital">Essence Digital</a>.</p>
+                <p>What's your name? <input type="text" placeholder="enter name" id="user-name-input" class="user-input"></p>
+                <p id="user-navigation" class="is-invisible">What do you want see? <a href="#github" class="js-navigation" data-section="github">My repositories</a> or <a href="#twitter" class="js-navigation" data-section="twitter">my twitter feed</a>?</p>
             </section>
             
         </div>
         
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script>
-        // Load jQuery if the Google CDN is down.
-        window.jQuery || document.write("<script type=\"text/javascript\" src\"jquery-1.10.2.min.js\"><\/script>");
-        // Create our App namespace.
-        var App = window.App = function(){};
+            // Load jQuery if the Google CDN is down.
+            window.jQuery || document.write("<script type=\"text/javascript\" src\"jquery-1.10.2.min.js\"><\/script>");
+            // Create our App namespace.
+            var App = window.App = function(){};
         </script>
 
         <script src="/js/vendor/twitter-fetcher.10.0.0.min.js"></script>
@@ -49,6 +49,13 @@
         <script src="/js/models.js"></script>
         <script src="/js/views.js"></script>
         <script src="/js/app.js"></script>
+
+        <script id="faux-table" type="text/template">
+            <div id="<%= id %>" class="faux-table"></div>
+        </script>
+        <script id="faux-table-cell" type="text/template">
+            <div class="faux-table__cell <% if(0 < order) { %>is-hidden<% } %>"><%= markup %></div>
+        </script>
 
     </body>
 </html>
