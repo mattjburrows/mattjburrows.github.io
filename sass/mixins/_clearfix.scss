@@ -1,0 +1,19 @@
+/**
+ * sass > mixins > _clearfix.scss
+ * @author Matthew Burrows <matthew.burrows@essencedigital.com>
+ */
+
+// Create a simple mixin for clearing floats.
+//
+// Compatible in IE7+
+@mixin clearfix {
+    *zoom: 1;
+    &:before,
+    &:after {
+        content: ' ';
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}

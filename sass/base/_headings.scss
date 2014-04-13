@@ -1,0 +1,56 @@
+/**
+ * sass > base > _headings.scss
+ * @author Matthew Burrows <matthew.burrows@essencedigital.com>
+ */
+
+h1, .h1 {
+    @include rem("margin-bottom", 8px);
+    @include rem("font-size", 50px);
+    font-weight: 700;
+    line-height: 1;
+}
+
+h2, .h2 {
+    @include rem("margin", 24px 0 8px 0);
+    @include rem("font-size", 30px);
+    font-weight: 300;
+    line-height: 1.1;
+}
+
+h3, .h3 {
+    @include rem("margin", 24px 0 8px 0);
+    @include rem("font-size", 24px);
+    line-height: 1.2;
+}
+
+h4, .h4 {
+    font-weight: 700;
+    @include rem("font-size", 18px);
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+h5, .h5 {}
+
+h6, .h6 {}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.intro {
+    text-align: center;
+    .intro__title {
+        @include rem("margin-bottom", 16px);
+    }
+    .intro__subtitle {
+        @include rem("margin-bottom", 24px);
+    }
+    .intro__actions {
+        margin: 0;
+    }
+}

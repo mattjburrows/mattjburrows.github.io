@@ -2,60 +2,66 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>Matt.J.Burrows | Coming soon...</title>
+        <title>Matt.J.Burrows | Senior Front-end Developer</title>
         <meta name="viewport" content="width=device-width">
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" /> 
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
         <!-- Custom CSS -->
+        <script src="/js/vendor/modernizr.custom.min.js"></script>
         <link rel="stylesheet" href="/css/screen.css">
 
     </head>
     <body>
         
-        <div class="faux-table">
+        <div class="fixed-header">
+            <div class="faux-table">
 
-            <header class="faux-table__cell">
-                <p><span class="h3">Matt.J.Burrows</span><br>Senior Front-end Developer</p>
-                <ul class="h6">
-                    <li><a href="http://github.com/mattjburrows/" target="_blank">github.com/mattjburrows</a></li>
-                    <li><a href="http://twitter.com/mattjburrows/" target="_blank">twitter.com/mattjburrows</a></li>
-                </ul>
-            </header>
-        
+                <header class="faux-table__cell intro">
+                    <h1 class="intro__title">Matt.J.Burrows</h1>
+                    <h2 class="intro__subtitle">Senior Front-end Developer</h2>
+                    <ul class="plain-list intro__actions">
+                        <li><a href="http://github.com/mattjburrows/" target="_blank" title="View my Github">github.com/mattjburrows</a></li>
+                        <li><a href="http://gist.github.com/mattjburrows" target="_blank" title="View my Github gists">gist.github.com/mattjburrows</a></li>
+                        <li><a href="http://twitter.com/mattjburrows/" target="_blank" title="Follow me on Twitter">twitter.com/mattjburrows</a></li>
+                        <li><a href="http://codepen.io/mattjburrows/" target="_blank" title="View my codepen">codepen.io/mattjburrows</a></li>
+                    </ul>
+                    <a href="#profile" class="anchor-link" title="Read profile">&#8964;</a>
+                </header>
+            
+            </div>
         </div>
         
-        <div class="faux-table">
+        <div id="profile" class="page-section faux-table box box--alpha">
 
             <section class="faux-table__cell">
-                <p>Hi <span id="user-name"></span>, I'm Matt. Senior Front-end Developer at <a href="http://www.essencedigital.com" title="Essence Digital">Essence Digital</a>.</p>
-                <p>What's your name? <input type="text" placeholder="enter name" id="user-name-input" class="user-input"></p>
-                <p id="user-navigation" class="is-invisible">What do you want see? <a href="#github" class="js-navigation" data-section="github">My repositories</a> or <a href="#twitter" class="js-navigation" data-section="twitter">my twitter feed</a>?</p>
+                
+                <div class="grid">
+                    
+                    <div class="grid__row">
+                    
+                        <div class="grid__column small--column-12-12 medium--column-2-12">
+                            <img src="/images/profile-photo.jpg" class="circle-img profile-img" alt="Matthew Burrows">
+                        </div>
+                    
+                        <div class="grid__column small--column-12-12 medium--column-5-12">
+                            <p>Hello and welcome to my little corner of the internet.<br>My name is Matthew Burrows and I am senior front-end developer at <a href="http://www.essencedigital.com" target="_blank" title="Essence Digital">Essence Digital</a> in London, UK.</p>
+                            <p>My role requires me to craft elegant web solutions utilising the latest technologies based on current best practises in maintainable, scalable OOCSS and modular JS.</p>
+                        </div>
+                        <div class="grid__column small--column-12-12 medium--column-5-12">
+                            <p>During a professional career spanning 6 years I have been fortunate to work with global brands such as Google, the Oxford English Dictionary, Pret and Tesco Mobile.</p>
+                            <p>In my spare time I like to follow the latest developments in the industry allowing me to <a href="http://codepen.io/mattjburrows/" target="_blank" title="View my experiments">experiment</a> and further my <a href="http://gist.github.com/mattjburrows" title="Journal coming soon...">knowledge</a>. When not working I like to explore London, skateboard and snowboard.</p>
+                        </div>
+                    
+                    </div>
+                
+                </div>
+                
             </section>
             
         </div>
         
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script>
-            // Load jQuery if the Google CDN is down.
-            window.jQuery || document.write("<script type=\"text/javascript\" src\"jquery-1.10.2.min.js\"><\/script>");
-            // Create our App namespace.
-            var App = window.App = function(){};
-        </script>
-
-        <script src="/js/vendor/twitter-fetcher.10.0.0.min.js"></script>
-        <script src="/js/vendor/underscore.min.js"></script>
-        <script src="/js/vendor/backbone.min.js"></script>
-
-        <script src="/js/collections.js"></script>
-        <script src="/js/models.js"></script>
-        <script src="/js/views.js"></script>
-        <script src="/js/app.js"></script>
-
-        <script id="faux-table" type="text/template">
-            <div id="<%= id %>" class="faux-table"></div>
-        </script>
-        <script id="faux-table-cell" type="text/template">
-            <div class="faux-table__cell <% if(0 < order) { %>is-hidden<% } %>"><%= markup %></div>
-        </script>
+        <script src="/js/global.min.js"></script>
 
     </body>
 </html>

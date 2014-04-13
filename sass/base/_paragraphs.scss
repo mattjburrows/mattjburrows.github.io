@@ -1,0 +1,51 @@
+/**
+ * sass > base > _paragraphs.scss
+ * @author Matthew Burrows <matthew.burrows@essencedigital.com>
+ */
+
+/* BASIC TEXT STYLING
+ ******************************/
+
+p {
+    @include rem("margin-bottom", 30px);
+    @include rem("font-size", 18px);
+}
+
+small {}
+
+address {}
+
+em,
+i {
+    font-style: italic;
+}
+
+strong,
+b {
+    font-weight: 700;
+}
+
+del {
+    color: #f00;
+    text-decoration: line-through;
+}
+
+a {
+    border-bottom: 1px solid transparent;
+    color: $brand-primary-alpha;
+    transition: color 0.25s ease 0s;
+    transition: border-color 0.25s ease 0s;
+    text-decoration: none;
+    &:hover,
+    &:visited {
+        border-bottom-color: darken($brand-primary-alpha, 10%);
+        color: darken($brand-primary-alpha, 15%);
+    }
+}
+
+.anchor-link {
+    position: relative;
+    border-bottom: 0;
+    @include rem("font-size", 60px);
+    animation: bounce 1s ease-in 0s 2;
+}

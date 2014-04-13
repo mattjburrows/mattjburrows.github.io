@@ -1,0 +1,85 @@
+/**
+ * sass > mixins > _media-queries.scss
+ * @author Matthew Burrows <matthew.burrows@essencedigital.com>
+ */
+
+/*
+ * Set up the media query variables.
+ *
+ * DEFAULT SCREEN SIZES
+ ******************************/
+
+$responsive: true !default;
+
+$small-gutter: 12px;
+$medium-gutter: 24px;
+
+$x-small-screen: 320px !default;
+$small-screen: 480px !default;
+$medium-screen: 768px !default;
+$large-screen: 960px !default;
+$x-large-screen: 1024px !default;
+
+/* CONVERT SCREEN SIZES TO EMS
+ ******************************/
+
+$x-small-screen-start: ems($small-screen - 1, $base-font) !default;
+
+$small-screen-start: ems($small-screen, $base-font) !default;
+$small-screen-end: ems($medium-screen - 1, $base-font) !default;
+
+$medium-screen-start: ems($medium-screen, $base-font) !default;
+$medium-screen-end: ems($large-screen - 1, $base-font) !default;
+
+$large-screen-start: ems($large-screen, $base-font) !default;
+$large-screen-end: ems($x-large-screen - 1, $base-font) !default;
+
+$x-large-screen-start: ems($x-large-screen, $base-font) !default;
+
+// Mixin for building media queries. Media queries build up from user defined values or from the _default.scss file.
+//
+// $media-query - String identifier for the media query to build.
+//
+// Compatible with all modern browsers that support media queries.
+@mixin media-query($media-query) {
+    @if 'x-small' == $media-query {
+        @media only screen and (max-width: $x-small-screen-start) {
+            @content;
+        }
+    }
+    @if 'small-only' == $media-query {
+        @media only screen and (max-width: $small-screen-end) {
+            @content;
+        }
+    }
+    @if 'small' == $media-query {
+        @media only screen and (min-width: $small-screen-start) {
+            @content;
+        }
+    }
+    @if 'medium-only' == $media-query {
+        @media only screen and (min-width: $medium-screen-start) and (max-width: $medium-screen-end) {
+            @content;
+        }
+    }
+    @if 'medium' == $media-query {
+        @media only screen and (min-width: $medium-screen-start) {
+            @content;
+        }
+    }
+    @if 'large-only' == $media-query {
+        @media only screen and (min-width: $large-screen-start) and (max-width: $large-screen-end) {
+            @content;
+        }
+    }
+    @if 'large' == $media-query {
+        @media only screen and (min-width: $large-screen-start) {
+            @content;
+        }
+    }
+    @if 'x-large' == $media-query {
+        @media only screen and (min-width: $x-large-screen-start) {
+            @content;
+        }
+    }
+}

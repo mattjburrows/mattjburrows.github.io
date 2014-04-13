@@ -1,0 +1,64 @@
+/**
+ * sass > objects > _grids.scss
+ * @author Matthew Burrows <matthew.burrows@essencedigital.com>
+ *
+ * This file will build up the code for a responsive fluid layout using %
+ */
+
+.grid {
+    &.grid--alpha {
+        @include rem("margin", 0 20px);
+    }
+    &,
+    .grid__row {
+        @include clearfix;
+    }
+    .grid__row {
+        @include rem("margin-right", -10px);
+        @include rem("margin-left", -10px);
+    }
+    .grid__column {
+        float: left;
+        display: block;
+        @include rem("padding", 0 10px);
+    }
+}
+
+$sml-grid-column: 12;
+$sml-column-inc: 1;
+@include media-query('small-only') {
+    .grid {
+        .grid__row {
+            @include rem("margin-right", -($small-gutter));
+            @include rem("margin-left", -($small-gutter));
+        }
+        .grid__column {
+            @include rem("padding", 0 $small-gutter);
+            @while $sml-column-inc <= $sml-grid-column {
+                &.small--column-#{$sml-column-inc}-#{$sml-grid-column} {
+                    width: (100% / $sml-grid-column) * $sml-column-inc;
+                }
+                $sml-column-inc: $sml-column-inc + 1;
+            }   
+        }
+    }
+}
+$med-grid-column: 12;
+$med-column-inc: 1;
+@include media-query('medium') {
+    .grid {
+        .grid__row {
+            @include rem("margin-right", -($medium-gutter));
+            @include rem("margin-left", -($medium-gutter));
+        }
+        .grid__column {
+            @include rem("padding", 0 $medium-gutter);
+            @while $med-column-inc <= $med-grid-column {
+                &.medium--column-#{$med-column-inc}-#{$med-grid-column} {
+                    width: (100% / $med-grid-column) * $med-column-inc;
+                }
+                $med-column-inc: $med-column-inc + 1;
+            }      
+        }
+    }
+}

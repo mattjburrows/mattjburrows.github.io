@@ -1,0 +1,18 @@
+/**
+ * sass > mixins > _vendors.scss
+ * @author Matthew Burrows <matthew.burrows@essencedigital.com>
+ */
+
+// Create a mixin to return a vendor specific property.
+//
+// $property - The non prefixed property.
+// $value    - The value of the property.
+//
+// Compatible with all modern browsers that support the given property.
+@mixin vendor($property, $value) {
+    -webkit-#{$property}: $value;
+    -moz-#{$property}: $value;
+    -ms-#{$property}: $value;
+    -o-#{$property}: $value;
+    #{$property}: $value;
+}
