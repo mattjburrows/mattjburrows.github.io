@@ -84,7 +84,7 @@ module.exports = function(grunt) {
             // We will get an infinite loop...
             // So listen out to changes to individual folder only.
             scripts: {
-                files: '<%= config.js %>app.js',
+                files: '<%= config.js %>global.js',
                 tasks: ['uglify:development']
             },
             // Listen out to all changes to any file in the sass folder.
