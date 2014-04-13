@@ -1,0 +1,37 @@
+/**
+ * sass > base > _lists.scss
+ * @author Matthew Burrows <matthew.burrows@essencedigital.com>
+ */
+
+ul,
+ol {
+    @include rem("margin", 0 0 30px 25px);
+    @include rem("padding", 0 0 0 25px);
+    @include rem("font-size", 18px);
+    li {}
+    ul,
+    ol {
+        margin-bottom: 0;
+        @include rem("font-size", 18px);
+    }
+}
+
+ul {
+    list-style: disc;
+}
+
+ol {
+    list-style: decimal;
+}
+
+.plain-list {
+    padding: 0;
+    list-style: none;
+}
+
+nav {
+    ul,
+    ol {
+        @extend .plain-list;
+    }
+}

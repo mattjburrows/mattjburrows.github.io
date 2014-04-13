@@ -1,0 +1,22 @@
+/**
+ * sass > objects > _boxes.scss
+ * @author Matthew Burrows <matthew.burrows@essencedigital.com>
+ *
+ */
+
+.box {
+    @include rem("padding-top", 60px);
+    @include rem("padding-right", $small-gutter);
+    @include rem("padding-bottom", 36px);
+    @include rem("padding-left", $small-gutter);
+    &.box--alpha {
+        border-top: 4px solid $brand-primary-alpha;
+        background: $white;
+    }
+}
+
+@include media-query("medium") {
+    .box {
+        @include rem("padding", 24px $medium-gutter);
+    }    
+}

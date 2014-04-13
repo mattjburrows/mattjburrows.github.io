@@ -1,0 +1,26 @@
+/**
+ * sass > base > _images.scss
+ * @author Matthew Burrows <matthew.burrows@essencedigital.com>
+ */
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+img[width],
+img[height] {
+    max-width: none;
+}
+
+.profile-img {
+    @include rem("width", 240px);
+    display: block;
+    margin: 0 auto;
+    @include rem("margin-bottom", 24px);
+}
+
+.circle-img {
+    border-radius: 50%;
+    border: 1px solid transparent;
+}

@@ -1,0 +1,14 @@
+/**
+ * sass > mixins > _inline-block.scss
+ * @author Matthew Burrows <matthew.burrows@essencedigital.com>
+ */
+
+// Create a simple mixin for older browsers to support display: inlin-block;
+//
+// No compatibility issues.
+@mixin inline-block {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    vertical-align: middle;
+}

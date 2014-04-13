@@ -1,0 +1,12 @@
+/**
+ * sass > animations > _bounce.scss
+ * @author Matthew Burrows <matthew.burrows@essencedigital.com>
+ *
+ */
+
+
+@keyframes bounce {
+    50% {
+        transform: translateY(6px);
+    }
+}

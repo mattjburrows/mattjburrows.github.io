@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 @import "compass/reset";
 @import "compass/css3";
 
@@ -41,3 +42,42 @@ body {
     margin: 0 auto;
     @include rem("padding", 0 40px);
 }
+=======
+/**
+ * sass > screen.scss
+ * @author Matthew Burrows <matthew.burrows@essencedigital.com>
+ *
+ * This file acts as an import base for all the Application styling.
+ * Styling is split into logical groups to make it easy to modularise the code.
+ *
+ * For more information please take a look at the Essence Digital Coding Standards site - http://essencedigital.github.com/coding-standards/
+ */
+
+@import url(http://fonts.googleapis.com/css?family=Merriweather:300,400,400italic,700);
+
+@import "reset";
+@import "defaults";
+
+@import "mixins/clearfix";
+@import "mixins/inline-block";
+@import "mixins/ems";
+@import "mixins/rems";
+@import "mixins/keyframes";
+@import "mixins/vendors";
+@import "mixins/media-queries";
+
+@import "base/layout";
+@import "base/alignment";
+@import "base/paragraphs";
+@import "base/headings";
+@import "base/lists";
+@import "base/forms";
+@import "base/images";
+@import "base/tables";
+
+@import "objects/grids";
+@import "objects/navigation";
+@import "objects/boxes";
+
+@import "animations/bounce";
+>>>>>>> 390dcc72d1b6b86f5ed94fe24792211f505ec7e4
