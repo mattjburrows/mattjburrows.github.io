@@ -1,14 +1,3 @@
-/**
- * sass > mixins > _ems.scss
- * @author Matthew Burrows <matthew.burrows@essencedigital.com>
- */
-
-// Convert pixel values into EMs.
-//
-// $px   - The pixel value that will get converted to EMs.
-// $base - The base value used to convert the pixel value to EMs.
-//
-// No compatibility issues.
 @function ems($px, $base) {
     @return $px / $base * 1em;
 }

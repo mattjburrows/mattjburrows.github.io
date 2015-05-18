@@ -1,12 +1,7 @@
-/**
- * sass > mixins > _media-queries.scss
- * @author Matthew Burrows <matthew.burrows@essencedigital.com>
- */
-
 /*
  * Set up the media query variables.
  *
- * DEFAULT SCREEN SIZES
+ * Default screen sizes
  ******************************/
 
 $responsive: true !default;
@@ -19,9 +14,6 @@ $small-screen: 480px !default;
 $medium-screen: 768px !default;
 $large-screen: 960px !default;
 $x-large-screen: 1024px !default;
-
-/* CONVERT SCREEN SIZES TO EMS
- ******************************/
 
 $x-small-screen-start: ems($small-screen - 1, $base-font) !default;
 
@@ -36,11 +28,6 @@ $large-screen-end: ems($x-large-screen - 1, $base-font) !default;
 
 $x-large-screen-start: ems($x-large-screen, $base-font) !default;
 
-// Mixin for building media queries. Media queries build up from user defined values or from the _default.scss file.
-//
-// $media-query - String identifier for the media query to build.
-//
-// Compatible with all modern browsers that support media queries.
 @mixin media-query($media-query) {
     @if 'x-small' == $media-query {
         @media only screen and (max-width: $x-small-screen-start) {

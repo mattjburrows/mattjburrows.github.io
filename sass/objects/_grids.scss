@@ -1,10 +1,3 @@
-/**
- * sass > objects > _grids.scss
- * @author Matthew Burrows <matthew.burrows@essencedigital.com>
- *
- * This file will build up the code for a responsive fluid layout using %
- */
-
 .grid {
     &.grid--alpha {
         @include rem("margin", 0 20px);
@@ -39,7 +32,7 @@ $sml-column-inc: 1;
                     width: (100% / $sml-grid-column) * $sml-column-inc;
                 }
                 $sml-column-inc: $sml-column-inc + 1;
-            }   
+            }
         }
     }
 }
@@ -58,7 +51,7 @@ $med-column-inc: 1;
                     width: (100% / $med-grid-column) * $med-column-inc;
                 }
                 $med-column-inc: $med-column-inc + 1;
-            }      
+            }
         }
     }
 }

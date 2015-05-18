@@ -1,29 +1,14 @@
-/**
- * sass > mixins > _rems.scss
- * @author Matthew Burrows <matthew.burrows@essencedigital.com>
- */
-
-// Mixin for declaring REM values.
-//
-// $property - CSS property for add REM values to.
-// $px       - The pixel value that will get converted to REMs.
-// $base     - Optional, Set the base value to work out the REM value from (defaults to 16px).
-//
-// Compatible with all modern browsers that support REMs.
 @mixin rem($property, $px, $base: 16px) {
-    // Convert the baseline into rems
     $rem: $base / 1rem;
-    // Print the first line in pixel values
     #{$property}: $px;
-    // If there is only one (numeric) value, return the property/value line for it.
+
     @if type-of($px) == "number" {
         #{$property}: $px / $rem;
     }
     @else {
-        // Create an empty list that we can dump values into
         $rem-values: unquote("");
+
         @each $value in $px {
-            // If the value is zero, return 0
             @if $value == 0 {
                 $rem-values: append($rem-values, $value);
             }
@@ -31,7 +16,7 @@
                 $rem-values: append($rem-values, $value / $rem);
             }
         }
-        // Return the property and its list of converted values
+        
         #{$property}: $rem-values;
     }
 }

@@ -1,13 +1,3 @@
-/**
- * sass > mixins > _keyframes.scss
- * @author Matthew Burrows <matthew.burrows@essencedigital.com>
- */
-
-// Create vendor specific animations.
-//
-// $animation-name - The animation name.
-//
-// Compatible with all modern browsers that support CSS animations.
 @mixin keyframe($animation-name) {
     @-webkit-keyframes #{$animation-name} {
         @content;
