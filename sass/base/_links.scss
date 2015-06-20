@@ -1,0 +1,16 @@
+a {
+    border-bottom: 1px solid $shade-beta;
+    color: $brand-primary-alpha;
+    transition: color 0.25s ease 0s;
+    transition: border-color 0.25s ease 0s;
+    text-decoration: none;
+
+    &:visited {
+        color: $brand-primary-beta;
+    }
+
+    @include hoverActiveFocus {
+        color: $brand-secondary-alpha;
+        border-bottom-color: $brand-secondary-alpha;
+    }
+}

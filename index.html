@@ -2,44 +2,46 @@
 layout: default
 title: Web Developer
 ---
-<div class="fixed-header">
+<div class="intro">
     <div class="faux-table">
-        <header class="faux-table__cell intro">
+        <header class="faux-table__cell">
             <h1 class="intro__title">Matt.J.Burrows</h1>
             <h2 class="intro__subtitle">Web Developer</h2>
             <ul class="plain-list intro__actions">
                 <li>
-                    <a href="http://github.com/mattjburrows/" target="_blank" title="View my Github" class="js-ga" data-site="Github">github.com/mattjburrows</a>
+                    <a href="http://github.com/mattjburrows/"><span class="a11y-hide">View my </span>Github</a>
                 </li>
                 <li>
-                    <a href="http://gist.github.com/mattjburrows" target="_blank" title="View my Github gists" class="js-ga" data-site="Github gists">gist.github.com/mattjburrows</a>
+                    <a href="http://gist.github.com/mattjburrows"><span class="a11y-hide">View my </span>Github gists</a>
                 </li>
                 <li>
-                    <a href="http://twitter.com/mattjburrows/" target="_blank" title="Follow me on Twitter" class="js-ga" data-site="Twitter">twitter.com/mattjburrows</a>
+                    <a href="http://twitter.com/mattjburrows/"><span class="a11y-hide">Follow me on </span>Twitter</a>
                 </li>
                 <li>
-                    <a href="http://codepen.io/mattjburrows/" target="_blank" title="View my codepen" class="js-ga" date-site="Codepen">codepen.io/mattjburrows</a>
+                    <a href="http://codepen.io/mattjburrows/"><span class="a11y-hide">View my </span>codepen</a>
+                </li>
+                <li>
+                    <a href="#profile"><span class="a11y-hide">Read more </span>About me</a>
                 </li>
             </ul>
-            <a href="#profile" class="anchor-link" title="Read profile">&#8964;</a>
         </header>
     </div>
 </div>
-<div id="profile" class="page-section faux-table box box--alpha">
+<main id="profile" class="page-section faux-table box box--alpha" aria-labelledby="profile-anchor" role="main">
     <section class="faux-table__cell grid">
             <div class="grid__row">
                 <div class="grid__column small--column-12-12 medium--column-2-12">
-                    <img src="/images/profile-photo.jpg" class="circle-img profile-img" alt="Matthew Burrows">
+                    <img src="/images/profile-photo.jpg" class="circle-img profile-img" alt="Matt.J.Burrows profile image">
                 </div>
                 <div class="grid__column small--column-12-12 medium--column-5-12">
-                    <p>Hello and welcome to my little corner of the internet.<br>My name is Matthew Burrows and I am a Web developer on the <a href="http://www.bbc.co.uk/iplayer" target="_blank" title="BBC iPlayer">BBC iPlayer</a> in London, UK.</p>
+                    <p>Hello and welcome to my little corner of the internet.<br>My name is Matthew Burrows and I am a Web developer on the <a href="http://www.bbc.co.uk/iplayer">BBC iPlayer</a> in London, UK.</p>
                     <p>My role requires me to craft elegant web solutions utilising the latest technologies based on current best practises in maintainable, scalable OOCSS / modular JS and PHP.</p>
                 </div>
                 <div class="grid__column small--column-12-12 medium--column-5-12">
-                    <p>During a professional career spanning 6 years I have been fortunate to work with global brands such as Google, the Oxford English Dictionary, Pret and Tesco Mobile.</p>
-                    <p>In my spare time I like to follow the latest developments in the industry allowing me to <a href="http://codepen.io/mattjburrows/" target="_blank" title="View my experiments" class="js-ga" data-site="Codepen">experiment</a> and further my <a href="http://gist.github.com/mattjburrows" title="Journal coming soon..." class="js-ga" data-site="Github gists">knowledge</a>. When not working I like to explore London, skateboard and snowboard.</p>
+                    <p>During a professional career spanning which began in 2008 I have been fortunate to work with global brands such as Google, the Oxford English Dictionary, Pret and Tesco Mobile.</p>
+                    <p>In my spare time I like to follow the latest developments in the industry allowing me to <a href="http://codepen.io/mattjburrows/">experiment with code</a> and further my knowledge. When not working I like to explore London, skateboard and snowboard.</p>
                 </div>
             </div>
         </div>
     </section>
-</div>
+</main>

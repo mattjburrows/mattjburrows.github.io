@@ -5,7 +5,7 @@
 html,
 body {
     @include rem("min-width", 320px);
-    color: $brand-primary-charlie;
+    color: $shade-alpha;
     font-family: $font-alpha;
     font-weight: 300;
     line-height: 1.5;
