@@ -1,4 +1,4 @@
 name: Matt.J.Burrows
-pygments: true
+highlighter: rouge
 exclude: ["Gruntfile.js", "package.json", "node_modules", "sass"]
 url: https://mattjburrows.github.io
