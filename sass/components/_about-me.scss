@@ -1,0 +1,31 @@
+.about-me {
+    @include clearfix;
+    @include rem("margin-right", -($small-gutter));
+    @include rem("margin-left", -($small-gutter));
+
+    &__img,
+    &__text {
+        width: 100%;
+        float: left;
+        display: block;
+        box-sizing: border-box;
+        @include rem("padding", 0 $small-gutter);
+    }
+
+    @include media-query('medium') {
+        @include rem("margin-right", -($small-gutter));
+        @include rem("margin-left", -($small-gutter));
+
+        .about-me__img,
+        .about-me__text {
+            @include rem("padding", 0 $medium-gutter);
+        }
+
+        .about-me__img {
+            width: 16.66667%;
+        }
+        .about-me__text {
+            width: 41.66667%;
+        }
+    }
+}

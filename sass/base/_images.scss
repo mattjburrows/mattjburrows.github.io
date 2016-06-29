@@ -13,9 +13,6 @@ img[height] {
     display: block;
     margin: 0 auto;
     @include rem("margin-bottom", 24px);
-}
-
-.circle-img {
     border-radius: 50%;
     border: 1px solid transparent;
 }

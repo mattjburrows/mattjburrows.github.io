@@ -1,19 +1,16 @@
-@import url(http://fonts.googleapis.com/css?family=Merriweather:300,400,400italic,700);
+@import url(http://fonts.googleapis.com/css?family=Merriweather:300,700);
 
 @import "reset";
 @import "defaults";
 
 @import "mixins/clearfix";
-@import "mixins/inline-block";
 @import "mixins/ems";
 @import "mixins/rems";
 @import "mixins/keyframes";
-@import "mixins/vendors";
 @import "mixins/media-queries";
 @import "mixins/hover-active-focus";
 
 @import "base/layout";
-@import "base/alignment";
 @import "base/paragraphs";
 @import "base/lists";
 @import "base/images";
@@ -21,8 +18,7 @@
 @import "base/links";
 @import "base/a11y-helpers";
 
-@import "objects/grids";
-@import "objects/navigation";
 @import "objects/boxes";
 
 @import "components/intro";
+@import "components/about-me";

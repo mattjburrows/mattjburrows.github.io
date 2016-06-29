@@ -1,5 +1,8 @@
 .a11y-hide {
     position: absolute;
-    top: 999em;
-    left: 999em;
+    top: -999em;
+    left: -999em;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
 }
