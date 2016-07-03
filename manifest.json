@@ -22,5 +22,6 @@
   "display": "standalone",
   "orientation": "portrait-primary",
   "background_color": "#FFFFFF",
+  "theme_color": "#0A6BCA",
   "lang": "en-GB"
 }
