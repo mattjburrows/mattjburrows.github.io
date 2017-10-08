@@ -1,4 +1,4 @@
-const CACHE_VERSION = 1;
+const CACHE_VERSION = 2;
 const CACHE_NAME = `MJB::${CACHE_VERSION}`;
 const CACHE_FILES = [
   '/',
@@ -78,7 +78,7 @@ function deleteUnusedCaches(cacheNames) {
   return Promise.all(
     cacheNames.map((cache) => {
       if (cache.indexOf(CACHE_NAME) === -1) return caches.delete(cache);
-      
+
       return Promise.resolve(`${CACHE_NAME} in use`);
     })
   );
