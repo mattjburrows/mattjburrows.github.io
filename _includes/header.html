@@ -14,8 +14,8 @@
         <script type="text/javascript">
           (function () {
               var isGithubPage = window.location.host === 'mattjburrows.github.io';
-              var isSecurePage = window.location.protocol !== 'https:';
-              if (isGithubPage && isSecurePage) window.location.protocol = 'https:';
+              var isSecurePage = window.location.protocol === 'https:';
+              if (isGithubPage && !isSecurePage) window.location.protocol = 'https:';
           })();
         </script>
         <script type="text/javascript">
